@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # own
-    path('', include('bboard.urls')),
+    path('bboard/', include('bboard.urls')),
 ]
