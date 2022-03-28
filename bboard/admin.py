@@ -9,4 +9,4 @@ class BbAdmin(admin.ModelAdmin):
     search_fields = ('title', 'content')
 
 
-admin.site.register(Bb)
+admin.site.register(Bb, BbAdmin)
