@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Bb
+from .models import Bb, Rubric
 
 # Register your models here.
 class BbAdmin(admin.ModelAdmin):
@@ -9,4 +9,4 @@ class BbAdmin(admin.ModelAdmin):
     search_fields      = ('title', 'content')
 
 
-admin.site.register(Bb, BbAdmin)
+admin.site.register(Bb, BbAdmin, Rubric)
