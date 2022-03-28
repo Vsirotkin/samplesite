@@ -8,9 +8,12 @@
     <h1>Объявления</h1>
     <div>
         <a href="{% url 'index' %}">Главная</а>
+            <!--iteration to view all rubrics-->
         {% for rubric in rubrics %}
             <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
         {% endfor %}
+        
+        <a href="{% url 'add' %}">Добавить</a> <!--form to add ads-->
     </div>
     {% for bb in bbs %}
         <div>
