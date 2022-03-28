@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доска объявлений</title>
+    <title>Главная :: Доска Объявлений</title>
 </head>
 <body>
     <h1>Объявления</h1>
-
-    {% for bb in bbs %}
     <div>
-        <h2>{{ bb.title }}</h2>
-        <p>{{ bb.content }}</p>
-        <p>{{ bb.price|floatformat:2 }}</p>
-        <p>{{ bb.published|date:'d.m.Y H:i:s' }}</p>
+        <a href="/bboard/">Главная</а>
+        {% for rubric in rubrics %}
+            <a href="/bboard/{{ rubric.pk }}/">{{ rubric.name }}</a>
+        {% endfor %}
     </div>
+    {% for bb in bbs %}
+        <div>
+            <h2>{{ bb.title }}</h2>
+            <p>{{ bb.content }}</p>
+            <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+            <p><a href="/bboard/{{ bb.rubric.pk }}/">
+                {{ bb.rubric.name }}</a></p>
+        </div>
     {% endfor %}
-    
 </body>
 </html>
