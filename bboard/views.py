@@ -6,7 +6,7 @@ from .models import Bb
 # Create your views here.
 # option for render
 def index(request):
-    bbs = Bb.objects.order_by('-published')
+    bbs = Bb.objects.all()
     context = {'bbs': bbs}
     
     return render(request, 'bboard/index.html', context=context)
