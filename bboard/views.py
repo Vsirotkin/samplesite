@@ -1,6 +1,6 @@
 from django.template import loader
 from django.shortcuts import render
-from django.http.response import HttpResponse
+#from django.http.response import HttpResponse
 from .models import Bb
 
 # Create your views here.
