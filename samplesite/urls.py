@@ -21,5 +21,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     
     # own
-    path('bboard/', include('bboard.urls')),
+    path('', include('bboard.urls')),
 ]
