@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{ current_rubric.name }} :: Доска Объявлений></title>
-</head>
-<body>
-    <h1>Объявления</h1>
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
     <h2>Рубрика: {{ current_rubric.name }}</h2>
-    <div>
-        <a href="{% url 'index' %}">Главная</a>
-
-        {% for rubric in rubrics %}
-            <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-        {% endfor %}
-
-        <a href="{% url 'add' %}">Добавить</a>
-    </div>
 
     {%for bb in bbs %}
         <div>
@@ -25,5 +12,4 @@
         </div>
     {% endfor %}
 
-</body>
-</html>
+{% endblock content %}
