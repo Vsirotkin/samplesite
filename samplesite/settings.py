@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # own
-    'bboard.apps.BboardConfig',
+    'bboard',
 ]
 
 MIDDLEWARE = [
@@ -113,9 +113,20 @@ LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Moscow'
 
-USE_I18N = True
+USE_I18N                = True
+USE_L18N                = False
+DECIMAL_SEPARATOR       = [',']
+NUMBER_GROUPING         = ['3']
+THOUSAND_SEPARATOR      = ['.']
+USE_THOUSAND_SEPARATOR  = True
+SHORT_DAY_FORMAT        = ['j.m.Y H:i']
+DATE_FORMAT             = ['j E Y']
+TIME_FORMAT             = ['H:i']
+DATE_INPUT_FORMATS      = ['%d.%m.%Y']
+DATETIME_INPUT_FORMATS  = ['%d. %m. %Y %H: %M']
+FIRST_DAY_OF_WEEK       = 1
 
-USE_TZ = True
+USE_TZ                  = True
 
 
 # Static files (CSS, JavaScript, Images)
