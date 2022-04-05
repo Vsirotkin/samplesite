@@ -9,8 +9,12 @@ djangorestframework = "*"
 django = "*"
 markdown = "*"
 django-filter = "*"
+requests = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+go = './manage.py runserver'
