@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # own
-    'bboard',
+    'bboard.apps.BboardConfig',
 ]
 
 MIDDLEWARE = [
